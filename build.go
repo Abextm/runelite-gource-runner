@@ -305,6 +305,6 @@ func buildLog() {
 }
 
 func main() {
-	//updateRepos()
+	updateRepos()
 	buildLog()
 }

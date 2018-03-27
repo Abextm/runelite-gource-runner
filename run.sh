@@ -15,6 +15,8 @@ ARGS="\
 	--font-size 16\
 	--seconds-per-day `expr 86400 / $COMMITS_PER_SECOND`\
 	--key\
+	--max-user-speed 1400\
+	--user-friction .2\
 	--hide date,filenames,mouse,progress\
 	--bloom-intensity .6\
 	--file-idle-time 0\
