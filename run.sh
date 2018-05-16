@@ -6,7 +6,7 @@ set -e -x
 
 go run build.go `cat github.oauth2_token`
 
-COMMITS_PER_SECOND=12
+COMMITS_PER_SECOND=25
 ARGS="\
 	-1920x1080\
 	--background-image logo.png\

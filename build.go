@@ -196,6 +196,8 @@ func buildLog() {
 	lastTS := uint64(0)
 	time := 0
 
+	files := map[string]struct{}{}
+
 	for {
 		// find next item
 		min := uint64(math.MaxUint64)
@@ -243,7 +245,14 @@ func buildLog() {
 			githubNames[name] = name
 		}
 
-		fmt.Fprintf(fi, "%v|%v|%v|/%v%v\n", time, name, minV.Type, minK, minV.File)
+		path := minK + minV.File
+		files[path] = struct{}{}
+
+		fmt.Fprintf(fi, "%v|%v|%v|/%v\n", time, name, minV.Type, path)
+	}
+
+	for file, _ := range files {
+		fmt.Fprintf(fi, "%v|%v|%v|/%v\n", time+10, "ModMatK", "D", file)
 	}
 
 	var ghc *github.Client
