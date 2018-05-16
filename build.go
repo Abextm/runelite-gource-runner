@@ -92,7 +92,10 @@ var githubNames = map[string]string{
 	"kokkue":                "utsukami",
 	"Abel Briggs":           "abelbriggs1",
 	"Martin Tuskevicius":    "DudeMartin",
+	"roweyman":              "RobinWeymans",
+	"Snorflake":             "ar1a",
 	"Runelite auto updater": "./updater.png",
+	"ModMatK":               "./mmk.png",
 }
 
 var repoDir = `repos`
